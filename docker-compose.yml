@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: nextjs_postgres
+    environment:
+      POSTGRES_USER: gonzaleki
+      POSTGRES_PASSWORD: mendoza6915
+      POSTGRES_DB: ventro-db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
